@@ -28,7 +28,7 @@ class Scraper
         profile.each do |a|
           binding.pry
           if a.attribute("href").value.include?("twitter")
-            
+
         {twitter: profile.css("a").attribute("href").value
 
   #      linkedin:,
