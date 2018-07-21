@@ -23,6 +23,7 @@ class Scraper
     #responsible for scraping an individual student's profile page to get further information about that student.
     hash = {}
     doc = Nokogiri::HTML(open(profile_url))
+    binding.pry
     doc.css("div.social-icon-container").each do |profile|
         {twitter: profile.css("a").attribute("href").value
   #      linkedin:,
