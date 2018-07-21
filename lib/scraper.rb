@@ -28,6 +28,7 @@ class Scraper
         profile.each do |a|
           if a.attribute("href").value.include?("twitter")
         {twitter: profile.css("a").attribute("href").value
+          binding.pry
   #      linkedin:,
   #      github:,
   #      blog:,
