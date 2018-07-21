@@ -24,13 +24,15 @@ class Scraper
     hash = {}
     doc = Nokogiri::HTML(open(profile_url))
     doc.css("div.social-icon-container").each do |profile|
-      {twitter: profile.css("a").attribute("href").first.value if profile.css("a").attribute("href").first.value.include?("twitter.com") ,
+    if profile.css("a").attribute("href").first.value.include?("twitter.com") 
+        {twitter: profile.css("a").attribute("href").first.value,
         linkedin: ,
         github: ,
         blog: ,
         profile_quote: ,
-        bio: 
+        bio:
       }
+    end
   end
 
 
