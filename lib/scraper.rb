@@ -26,10 +26,10 @@ class Scraper
     doc.css("div.social-icon-container").each do |profile|
     if profile.css("a").attribute("href").first.value.include?("twitter.com")
         {twitter: profile.css("a").attribute("href").first.value,
-        linkedin: ,
-        github: ,
-        blog: ,
-        profile_quote: ,
+        linkedin:,
+        github:,
+        blog:,
+        profile_quote:,
         bio:
       }
     end
