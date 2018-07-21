@@ -27,6 +27,7 @@ class Scraper
     doc.css("div.social-icon-container a").each do |profile|
         profile.each do |a|
           if a.attribute("href").value.include?("twitter")
+            binding.pry
         {twitter: profile.css("a").attribute("href").value
 
   #      linkedin:,
@@ -35,7 +36,7 @@ class Scraper
   #      profile_quote:,
   #      bio:
         }
-        binding.pry
+        
       end
     end
     end
